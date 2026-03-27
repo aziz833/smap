@@ -1,0 +1,240 @@
+export const projects = [
+  {
+    id: 'p1',
+    name: 'Plateforme e-Gestion (SaaS)',
+    status: 'En cours',
+    description:
+      "Développement d'une plateforme IT avec suivi intelligent, analyse des risques et planification assistée par IA.",
+    progress: 68,
+    startDate: '2026-02-01',
+    deadline: '2026-06-20',
+    budget: 32000,
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Docker', 'AI Agents'],
+    requirements: [
+      { label: 'Backlog validé', done: true },
+      { label: 'Architecture définie', done: true },
+      { label: 'Sprint 1 livré', done: true },
+      { label: 'Sprint 2 en cours', done: false },
+      { label: 'Tests & qualité', done: false },
+    ],
+    team: [
+      { name: 'Aziz Benrejeb', email: 'Azizbenrejeb@gmail.com', avatar: 'AB', color: '#3B82F6' },
+      { name: 'Mohamed Amine', email: 'mohmedamine@gmail.com', avatar: 'MA', color: '#10B981' },
+      { name: 'Yosr', email: 'yosr@gmail.com', avatar: 'YO', color: '#F59E0B' },
+    ],
+    sprints: [
+      {
+        id: 's1',
+        name: 'Sprint 1',
+        startDate: '2026-02-01',
+        endDate: '2026-02-14',
+        status: 'Terminé',
+        progress: 100,
+        tasks: [
+          {
+            id: 't1',
+            name: 'Initialiser le repo + CI',
+            assignee: 'Aziz Benrejeb',
+            priority: 'Normal',
+            status: 'Terminé',
+            estimatedDays: 2,
+          },
+          {
+            id: 't2',
+            name: 'Écran Login + rôles',
+            assignee: 'Mohamed Amine',
+            priority: 'Urgent',
+            status: 'Terminé',
+            estimatedDays: 3,
+          },
+        ],
+      },
+      {
+        id: 's2',
+        name: 'Sprint 2',
+        startDate: '2026-02-15',
+        endDate: '2026-03-05',
+        status: 'Active',
+        progress: 62,
+        tasks: [
+          {
+            id: 't3',
+            name: 'Dashboard Manager (stats + projets)',
+            assignee: 'Yosr',
+            priority: 'Urgent',
+            status: 'En cours',
+            estimatedDays: 4,
+          },
+          {
+            id: 't4',
+            name: 'Chatbot IA (drawer)',
+            assignee: 'Mohamed Amine',
+            priority: 'Normal',
+            status: 'Todo',
+            estimatedDays: 2,
+          },
+        ],
+      },
+      {
+        id: 's3',
+        name: 'Sprint 3',
+        startDate: '2026-03-06',
+        endDate: '2026-03-25',
+        status: 'À venir',
+        progress: 0,
+        tasks: [
+          {
+            id: 't5',
+            name: 'Module risques + recommandations',
+            assignee: 'Aziz Benrejeb',
+            priority: 'Normal',
+            status: 'Todo',
+            estimatedDays: 5,
+          },
+        ],
+      },
+    ],
+    risks: [
+      {
+        id: 'r1',
+        level: 'Élevé',
+        description: "Dérive du planning due à sous-estimation de l'intégration IA.",
+        probability: 'Haute',
+        impact: 'Très fort',
+        solution:
+          'Découper en itérations, définir des critères d’acceptation, prototyper tôt et mesurer les temps.',
+      },
+      {
+        id: 'r2',
+        level: 'Moyen',
+        description: 'Qualité de données insuffisante pour les recommandations automatiques.',
+        probability: 'Moyenne',
+        impact: 'Moyen',
+        solution: 'Mettre des garde-fous + validation humaine + logs et suivi des erreurs.',
+      },
+      {
+        id: 'r3',
+        level: 'Faible',
+        description: 'Incohérence UI sur mobile (sidebar / drawer).',
+        probability: 'Basse',
+        impact: 'Faible',
+        solution: 'Tests responsive, composants réutilisables, règles CSS cohérentes.',
+      },
+    ],
+    progressHistory: [
+      { date: '2026-02-01', progress: 8 },
+      { date: '2026-02-10', progress: 22 },
+      { date: '2026-02-20', progress: 38 },
+      { date: '2026-03-01', progress: 52 },
+      { date: '2026-03-10', progress: 61 },
+      { date: '2026-03-20', progress: 68 },
+    ],
+  },
+  {
+    id: 'p2',
+    name: 'Refonte API & Sécurité',
+    status: 'Nouveau',
+    description:
+      'Refonte des endpoints, gestion des rôles et durcissement de la sécurité (audit + monitoring).',
+    progress: 12,
+    startDate: '2026-03-18',
+    deadline: '2026-05-10',
+    budget: 18000,
+    technologies: ['Node.js', 'JWT', 'Rate Limit', 'Monitoring'],
+    requirements: [
+      { label: 'Audit existant', done: false },
+      { label: 'Plan de migration', done: false },
+      { label: 'MVP endpoints', done: false },
+    ],
+    team: [
+      { name: 'Hiba', email: 'hiba@gmail.com', avatar: 'HI', color: '#EF4444' },
+      { name: 'Tasnim', email: 'tasnim@gmail.com', avatar: 'TA', color: '#8B5CF6' },
+    ],
+    sprints: [],
+    risks: [],
+    progressHistory: [
+      { date: '2026-03-18', progress: 5 },
+      { date: '2026-03-22', progress: 12 },
+    ],
+  },
+  {
+    id: 'p3',
+    name: 'Portail Client (UI)',
+    status: 'Terminé',
+    description:
+      'Portail client minimaliste: suivi, jalons, feed d’activité et rapports simplifiés.',
+    progress: 100,
+    startDate: '2026-01-10',
+    deadline: '2026-02-10',
+    budget: 9000,
+    technologies: ['React', 'Charts', 'UX'],
+    requirements: [
+      { label: 'Maquettes', done: true },
+      { label: 'Implémentation', done: true },
+      { label: 'Recette', done: true },
+    ],
+    team: [
+      { name: 'Mohamed Amine', email: 'mohmedamine@gmail.com', avatar: 'MA', color: '#10B981' }
+    ],
+    sprints: [],
+    risks: [],
+    progressHistory: [
+      { date: '2026-01-10', progress: 10 },
+      { date: '2026-01-20', progress: 42 },
+      { date: '2026-02-01', progress: 76 },
+      { date: '2026-02-10', progress: 100 },
+    ],
+  },
+]
+
+export const devTasksToday = [
+  {
+    id: 'dt1',
+    task: 'Implémenter la modale de confirmation de tâche',
+    project: 'Plateforme e-Gestion (SaaS)',
+    priority: 'Urgent',
+    estimated: '2h',
+    status: 'En cours',
+  },
+  {
+    id: 'dt2',
+    task: 'Ajuster les badges + progress bars',
+    project: 'Portail Client (UI)',
+    priority: 'Normal',
+    estimated: '1h',
+    status: 'Todo',
+  },
+  {
+    id: 'dt3',
+    task: 'Écrire les tests manuels du flux login',
+    project: 'Refonte API & Sécurité',
+    priority: 'Low',
+    estimated: '45min',
+    status: 'Todo',
+  },
+]
+
+export const clientProject = {
+  name: 'Plateforme e-Gestion (SaaS)',
+  progress: 68,
+  status: 'En cours',
+  startDate: '2026-02-01',
+  deadline: '2026-06-20',
+  milestones: [
+    { label: 'Cadrage & backlog', state: 'done' },
+    { label: 'Sprint 1', state: 'done' },
+    { label: 'Sprint 2', state: 'current' },
+    { label: 'Sprint 3', state: 'upcoming' },
+    { label: 'Livraison finale', state: 'upcoming' },
+  ],
+  updates: [
+    { label: 'Sprint 1 terminé ✅', date: '2026-02-14' },
+    { label: 'Détection de 2 risques majeurs', date: '2026-02-18' },
+    { label: 'Sprint 2: 62% réalisé', date: '2026-03-02' },
+  ],
+  stats: {
+    done: 18,
+    inProgress: 6,
+    remaining: 9,
+  },
+}
